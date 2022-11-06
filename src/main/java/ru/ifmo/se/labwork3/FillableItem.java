@@ -3,8 +3,8 @@ package ru.ifmo.se.labwork3;
 import java.util.Objects;
 
 public abstract class FillableItem extends Item implements FillableSpace {
-    protected StatusOfFullness fullness;
-    protected Object containedObject;
+    private StatusOfFullness fullness;
+    private Object containedObject;
 
     public FillableItem(String name, StatusOfFullness fullness) {
         super(name);
@@ -44,19 +44,6 @@ public abstract class FillableItem extends Item implements FillableSpace {
         }
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null || obj.getClass() != this.getClass()) {
-            return false;
-        }
-        FillableItem fillableItem = (FillableItem) obj;
-        return (Objects.equals(this.getFullness().toString() + this.getName(), fillableItem.getFullness().toString() + fillableItem.getName()));
-    }
 
-
-    @Override
-    public int hashCode() {
-        return (this.getFullness().toString().hashCode() + this.getName().hashCode());
-    }
 
 }

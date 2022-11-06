@@ -1,7 +1,7 @@
 package ru.ifmo.se.labwork3;
 
 public abstract class FillableLocation extends Location implements FillableSpace{
-    protected Object containedObject;
+    private Object containedObject;
     public FillableLocation(String name) {
         super(name);
     }

@@ -1,9 +1,7 @@
 package ru.ifmo.se.labwork3;
 
-import java.util.Objects;
-
 public abstract class Animal {
-    protected String name = "";
+    private String name = "";
 
 
     public Animal(String name) {
@@ -24,19 +22,5 @@ public abstract class Animal {
     @Override
     public String toString() {
         return name;
-    }
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null || obj.getClass() != this.getClass()) {
-            return false;
-        }
-        Animal item = (Animal) obj;
-        return (Objects.equals(this.getName(), item.getName()));
-    }
-
-
-    @Override
-    public int hashCode() {
-        return (this.getName().hashCode());
     }
 }

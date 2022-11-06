@@ -3,8 +3,8 @@ package ru.ifmo.se.labwork3;
 import java.util.Objects;
 
 public class Statement {
-    protected String text;
-    protected  boolean isCorrect;
+    private String text;
+    private  boolean isCorrect;
     public Statement(String text, boolean isCorrect){
         this.text = text;
         this.isCorrect = isCorrect;

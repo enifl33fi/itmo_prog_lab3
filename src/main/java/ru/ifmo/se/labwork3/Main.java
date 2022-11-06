@@ -3,15 +3,15 @@ package ru.ifmo.se.labwork3;
 public class Main {
     public static void main(String[] args) {
         //Creating objects
-        Pot pot = new Pot("горшочек");
-        WinnieThePooh winnieThePooh = new WinnieThePooh("Винни", "Пух");
-        Piglet piglet = new Piglet("Пятачок");
-        Muzzle muzzle = new Muzzle("мордочка");
-        Honey honey = new Honey("мёд");
-        VeryDeepHole veryDeepHole = new VeryDeepHole("Очень Глубокая Яма");
-        Trap trap = new Trap("западня");
-        Statement lickGood = new Statement("Винни как следует лизнул", true);
-        Statement itIsEverything = new Statement("Это все что у него осталось", true);
+        var pot = new Pot("горшочек");
+        var winnieThePooh = new WinnieThePooh("Винни", "Пух");
+        var piglet = new Piglet("Пятачок");
+        var muzzle = new Muzzle("мордочка");
+        var honey = new Honey("мёд");
+        var veryDeepHole = new VeryDeepHole("Очень Глубокая Яма");
+        var trap = new Trap("западня");
+        var lickGood = new Statement("Винни как следует лизнул", true);
+        var itIsEverything = new Statement("Это все что у него осталось", true);
         //Setting the scene
         pot.fill(honey);
         veryDeepHole.fill(piglet);
@@ -27,5 +27,6 @@ public class Main {
         piglet.say("Это все, что у тебя осталось?", StatusOfSpeaker.PUZZLED);
         winnieThePooh.process(itIsEverything);
         winnieThePooh.say("Да.");
+
     }
 }

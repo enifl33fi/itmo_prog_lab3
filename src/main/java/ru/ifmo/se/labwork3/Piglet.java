@@ -1,5 +1,7 @@
 package ru.ifmo.se.labwork3;
 
+import java.util.Objects;
+
 public class Piglet extends Animal implements EmotionalSpeaker {
     public Piglet(String name) {
         super(name);
@@ -24,6 +26,21 @@ public class Piglet extends Animal implements EmotionalSpeaker {
 
     public void lookInto(FillableSpace whereToLook){
         System.out.printf("%s заглянул в %s%n", this.getName(),  whereToLook.toString());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Piglet piglet = (Piglet) obj;
+        return (Objects.equals(this.getName(), piglet.getName()));
+    }
+
+
+    @Override
+    public int hashCode() {
+        return (this.getName().hashCode());
     }
 
 }

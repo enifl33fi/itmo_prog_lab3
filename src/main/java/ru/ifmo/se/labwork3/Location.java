@@ -3,7 +3,7 @@ package ru.ifmo.se.labwork3;
 import java.util.Objects;
 
 public abstract class Location {
-    protected String name = "";
+    private String name = "";
 
 
     public Location(String name) {
@@ -26,19 +26,5 @@ public abstract class Location {
     @Override
     public String toString() {
         return name;
-    }
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null || obj.getClass() != this.getClass()) {
-            return false;
-        }
-        Location item = (Location) obj;
-        return (Objects.equals(this.getName(), item.getName()));
-    }
-
-
-    @Override
-    public int hashCode() {
-        return (this.getName().hashCode());
     }
 }
