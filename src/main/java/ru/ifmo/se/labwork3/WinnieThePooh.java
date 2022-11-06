@@ -30,7 +30,7 @@ public class WinnieThePooh extends Animal implements StatementProcessor, Emotion
         System.out.printf("%s положил в %s %s%n", this.getFirstName(), fillableSpace.getName(), whatToPut.toString());
     }
 
-    public void shove (FillableSpace fillableSpace, Object whatToShove) {
+    public void shove(FillableSpace fillableSpace, Object whatToShove) {
         System.out.printf("%s сунул в %s %s%n", this.getFirstName(), fillableSpace.getName(), whatToShove.toString());
     }
 
@@ -51,7 +51,7 @@ public class WinnieThePooh extends Animal implements StatementProcessor, Emotion
         return lastName;
     }
 
-    public void carry(Object whatToCarry, Location whereToCarry){
+    public void carry(Object whatToCarry, Location whereToCarry) {
         System.out.printf("%s отнёс %s к %s%n", this.getName(), whatToCarry.toString(), whereToCarry.getName());
     }
 

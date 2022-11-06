@@ -27,7 +27,7 @@ public abstract class FillableItem extends Item implements FillableSpace {
 
     @Override
     public void fill(Object containedObject) {
-        if (this.containedObject != null){
+        if (this.containedObject != null) {
             this.out();
         }
         this.containedObject = containedObject;
@@ -43,7 +43,6 @@ public abstract class FillableItem extends Item implements FillableSpace {
             this.containedObject = null;
         }
     }
-
 
 
 }

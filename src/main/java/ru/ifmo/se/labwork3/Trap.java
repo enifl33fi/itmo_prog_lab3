@@ -2,10 +2,11 @@ package ru.ifmo.se.labwork3;
 
 import java.util.Objects;
 
-public class Trap extends Location{
+public class Trap extends Location {
     public Trap(String name) {
         super(name);
     }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null || obj.getClass() != this.getClass()) {

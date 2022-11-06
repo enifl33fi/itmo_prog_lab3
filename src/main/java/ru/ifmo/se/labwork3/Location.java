@@ -19,7 +19,7 @@ public abstract class Location {
         return name;
     }
 
-    public void destroy(){
+    public void destroy() {
         System.out.println(this.getName() + " превратилась в ядерный пепел");
     }
 

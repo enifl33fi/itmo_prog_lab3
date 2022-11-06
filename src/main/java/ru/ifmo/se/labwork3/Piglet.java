@@ -17,15 +17,14 @@ public class Piglet extends Animal implements EmotionalSpeaker {
         say(phrase, StatusOfSpeaker.NORMAL);
     }
 
-    public void lookOut(FillableLocation fromWhere){
+    public void lookOut(FillableLocation fromWhere) {
         System.out.printf("%s выглянул из %s%n", this.getName(), fromWhere.toString());
         fromWhere.out();
     }
 
 
-
-    public void lookInto(FillableSpace whereToLook){
-        System.out.printf("%s заглянул в %s%n", this.getName(),  whereToLook.toString());
+    public void lookInto(FillableSpace whereToLook) {
+        System.out.printf("%s заглянул в %s%n", this.getName(), whereToLook.toString());
     }
 
     @Override

@@ -5,12 +5,13 @@ public enum StatusOfSpeaker {
     PUZZLED("спросил");
 
     private final String title;
+
     StatusOfSpeaker(String title) {
         this.title = title;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return title;
     }
 }

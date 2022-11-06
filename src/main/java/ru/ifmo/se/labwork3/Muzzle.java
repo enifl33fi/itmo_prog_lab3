@@ -2,11 +2,12 @@ package ru.ifmo.se.labwork3;
 
 import java.util.Objects;
 
-public class Muzzle extends Item{
+public class Muzzle extends Item {
 
     public Muzzle(String name) {
         super(name);
     }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null || obj.getClass() != this.getClass()) {

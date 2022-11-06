@@ -7,9 +7,11 @@ public class Pot extends FillableItem {
     public Pot(String name, StatusOfFullness fullness) {
         super(name, fullness);
     }
-    public Pot(String name){
+
+    public Pot(String name) {
         super((name));
     }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null || obj.getClass() != this.getClass()) {

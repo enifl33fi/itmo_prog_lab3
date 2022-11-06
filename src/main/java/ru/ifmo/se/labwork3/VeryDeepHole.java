@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class VeryDeepHole extends FillableLocation {
     private Object containedObject;
+
     public VeryDeepHole(String name) {
         super(name);
     }

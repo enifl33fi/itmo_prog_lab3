@@ -4,15 +4,18 @@ import java.util.Objects;
 
 public class Statement {
     private String text;
-    private  boolean isCorrect;
-    public Statement(String text, boolean isCorrect){
+    private boolean isCorrect;
+
+    public Statement(String text, boolean isCorrect) {
         this.text = text;
         this.isCorrect = isCorrect;
     }
-    public boolean isCorrectCheck(){
+
+    public boolean isCorrectCheck() {
         return this.isCorrect;
     }
-    public String getTextOfStatement(){
+
+    public String getTextOfStatement() {
         return this.text;
     }
 
@@ -30,8 +33,7 @@ public class Statement {
     public int hashCode() {
         if (this.isCorrect) {
             return (("1" + this.getTextOfStatement()).hashCode());
-        }
-        else {
+        } else {
             return (("0" + this.getTextOfStatement()).hashCode());
         }
     }

@@ -2,11 +2,12 @@ package ru.ifmo.se.labwork3;
 
 import java.util.Objects;
 
-public class Honey extends Item{
+public class Honey extends Item {
 
     public Honey(String name) {
         super(name);
     }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null || obj.getClass() != this.getClass()) {

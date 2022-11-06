@@ -6,12 +6,13 @@ public enum StatusOfFullness {
     NULL("пустой");
 
     private final String title;
+
     StatusOfFullness(String title) {
         this.title = title;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return title;
     }
 }
