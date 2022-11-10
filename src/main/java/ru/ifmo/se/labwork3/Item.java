@@ -3,7 +3,6 @@ package ru.ifmo.se.labwork3;
 
 public abstract class Item {
     private String name;
-    private StatusOfFullness fullness;
 
 
     public Item(String name) {
