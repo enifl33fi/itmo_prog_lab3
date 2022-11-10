@@ -2,7 +2,7 @@ package ru.ifmo.se.labwork3;
 
 import java.util.Objects;
 
-public class Piglet extends Animal implements EmotionalSpeaker {
+public final class Piglet extends Animal implements EmotionalSpeaker {
     public Piglet(String name) {
         super(name);
     }

@@ -2,7 +2,7 @@ package ru.ifmo.se.labwork3;
 
 import java.util.Objects;
 
-public class WinnieThePooh extends Animal implements StatementProcessor, EmotionalSpeaker {
+public final class WinnieThePooh extends Animal implements StatementProcessor, EmotionalSpeaker {
     private String firstName;
     private String lastName;
 
