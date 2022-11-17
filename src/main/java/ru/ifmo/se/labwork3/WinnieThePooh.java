@@ -27,11 +27,11 @@ public final class WinnieThePooh extends Animal implements StatementProcessor, E
 
     public void put(FillableSpace fillableSpace, Object whatToPut) {
         fillableSpace.fill(whatToPut);
-        System.out.printf("%s положил в %s %s%n", this.getFirstName(), fillableSpace.getName(), whatToPut.toString());
+        System.out.printf("%s положил в %s %s%n", this.getFirstName(), fillableSpace.toString(), whatToPut.toString());
     }
 
     public void shove(FillableSpace fillableSpace, Object whatToShove) {
-        System.out.printf("%s сунул в %s %s%n", this.getFirstName(), fillableSpace.getName(), whatToShove.toString());
+        System.out.printf("%s сунул в %s %s%n", this.getFirstName(), fillableSpace.toString(), whatToShove.toString());
     }
 
     @Override

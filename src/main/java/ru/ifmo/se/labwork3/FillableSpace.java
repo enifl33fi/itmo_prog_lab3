@@ -4,6 +4,4 @@ public interface FillableSpace {
     public void fill(Object obj);
 
     public void out();
-
-    public String getName();
 }
