@@ -1,8 +1,11 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.model;
+
+import ru.ifmo.se.labwork3.basic.*;
+import ru.ifmo.se.labwork3.status.StatusOfSpeaker;
 
 import java.util.Objects;
 
-public final class Piglet extends Animal implements EmotionalSpeaker {
+public class Piglet extends Animal implements EmotionalSpeaker, AbleToLookSomewhere {
     public Piglet(String name) {
         super(name);
     }
@@ -16,13 +19,13 @@ public final class Piglet extends Animal implements EmotionalSpeaker {
     public void say(String phrase) {
         say(phrase, StatusOfSpeaker.NORMAL);
     }
-
-    public void lookOut(FillableLocation fromWhere) {
+    @Override
+    public void lookOut(FillableSpace fromWhere) {
         System.out.printf("%s выглянул из %s%n", this.getName(), fromWhere.toString());
         fromWhere.out();
     }
 
-
+    @Override
     public void lookInto(FillableSpace whereToLook) {
         System.out.printf("%s заглянул в %s%n", this.getName(), whereToLook.toString());
     }

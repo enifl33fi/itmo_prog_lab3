@@ -1,10 +1,11 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.model;
+
+import ru.ifmo.se.labwork3.basic.Location;
 
 import java.util.Objects;
 
-public class Honey extends Item {
-
-    public Honey(String name) {
+public class Trap extends Location {
+    public Trap(String name) {
         super(name);
     }
 
@@ -13,8 +14,8 @@ public class Honey extends Item {
         if (obj == null || obj.getClass() != this.getClass()) {
             return false;
         }
-        Honey honey = (Honey) obj;
-        return (Objects.equals(this.getName(), honey.getName()));
+        Trap trap = (Trap) obj;
+        return (Objects.equals(this.getName(), trap.getName()));
     }
 
 

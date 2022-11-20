@@ -1,5 +1,8 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.model;
 
+
+import ru.ifmo.se.labwork3.basic.FillableItem;
+import ru.ifmo.se.labwork3.status.StatusOfFullness;
 
 import java.util.Objects;
 
@@ -9,7 +12,7 @@ public class Pot extends FillableItem {
     }
 
     public Pot(String name) {
-        super((name));
+        super(name);
     }
 
     @Override

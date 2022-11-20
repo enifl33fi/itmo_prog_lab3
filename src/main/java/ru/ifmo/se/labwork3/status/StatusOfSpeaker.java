@@ -1,4 +1,4 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.status;
 
 public enum StatusOfSpeaker {
     NORMAL("сказал"),

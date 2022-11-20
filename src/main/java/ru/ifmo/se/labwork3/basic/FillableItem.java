@@ -1,10 +1,10 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.basic;
 
-import java.util.Objects;
+import ru.ifmo.se.labwork3.status.StatusOfFullness;
 
 public abstract class FillableItem extends Item implements FillableSpace {
     private StatusOfFullness fullness;
-    private Object containedObject;
+    private Entity containedObject;
 
     public FillableItem(String name, StatusOfFullness fullness) {
         super(name);
@@ -26,7 +26,7 @@ public abstract class FillableItem extends Item implements FillableSpace {
     }
 
     @Override
-    public void fill(Object containedObject) {
+    public void fill(Entity containedObject) {
         if (this.containedObject != null) {
             this.out();
         }

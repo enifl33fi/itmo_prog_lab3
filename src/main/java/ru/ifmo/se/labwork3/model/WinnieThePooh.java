@@ -1,45 +1,49 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.model;
+
+import ru.ifmo.se.labwork3.basic.*;
+import ru.ifmo.se.labwork3.status.StatusOfFullness;
+import ru.ifmo.se.labwork3.status.StatusOfSpeaker;
 
 import java.util.Objects;
 
-public final class WinnieThePooh extends Animal implements StatementProcessor, EmotionalSpeaker {
-    private String firstName;
-    private String lastName;
+public class WinnieThePooh extends Animal implements InformationProcessor, EmotionalSpeaker, AbleToLick, AbleToCarry, AbleToShove {
+    private final String firstName;
+    private final String lastName;
+
+    private final BodyPart head;
 
 
-    public WinnieThePooh(String firstName, String lastName) {
+    public WinnieThePooh(String firstName, String lastName, BodyPart head) {
         super(firstName + " " + lastName);
         this.firstName = firstName;
         this.lastName = lastName;
+        this.head = head;
     }
 
     public void lick(FillableItem fillableItemToLick) {
-        System.out.printf("%s как следует лизнул %s %s%n", this.getName(), fillableItemToLick.getFullness().toString(), fillableItemToLick.getName());
+        System.out.printf("%s как следует лизнул %s%n", this.getName(), fillableItemToLick.getName());
         switch (fillableItemToLick.getFullness()) {
             case FULL -> fillableItemToLick.setFullness(StatusOfFullness.FEW);
             case FEW, NULL -> fillableItemToLick.setFullness(StatusOfFullness.NULL);
         }
     }
 
-    public void lick(Item itemToLick) {
-        System.out.printf("как следует лизнул %s%n", itemToLick.getName());
+    @Override
+    public void lick(Entity entityToLick) {
+        System.out.printf("как следует лизнул %s%n", entityToLick.getName());
     }
 
-    public void put(FillableSpace fillableSpace, Object whatToPut) {
-        fillableSpace.fill(whatToPut);
-        System.out.printf("%s положил в %s %s%n", this.getFirstName(), fillableSpace.toString(), whatToPut.toString());
-    }
-
-    public void shove(FillableSpace fillableSpace, Object whatToShove) {
+    @Override
+    public void shove(FillableSpace fillableSpace, BodyPart whatToShove) {
         System.out.printf("%s сунул в %s %s%n", this.getFirstName(), fillableSpace.toString(), whatToShove.toString());
     }
 
     @Override
-    public void process(Statement statement) {
-        if (statement.isCorrectCheck()) {
-            System.out.printf("окончательно убедившись, что %s правда%n", statement.getTextOfStatement());
+    public void process(Information information) {
+        if (information.isCorrectCheck()) {
+            System.out.printf("окончательно убедившись, что %s правда%n", information.getText());
         } else {
-            System.out.printf("окончательно убедившись, что %s неправда%n", statement.getTextOfStatement());
+            System.out.printf("окончательно убедившись, что %s неправда%n", information.getText());
         }
     }
 
@@ -51,7 +55,8 @@ public final class WinnieThePooh extends Animal implements StatementProcessor, E
         return lastName;
     }
 
-    public void carry(Object whatToCarry, Location whereToCarry) {
+    @Override
+    public void carry(Entity whatToCarry, Place whereToCarry) {
         System.out.printf("%s отнёс %s к %s%n", this.getName(), whatToCarry.toString(), whereToCarry.getName());
     }
 
@@ -70,7 +75,6 @@ public final class WinnieThePooh extends Animal implements StatementProcessor, E
         return (this.getName()).hashCode();
     }
 
-
     @Override
     public boolean equals(Object obj) {
         if (obj == null || obj.getClass() != this.getClass()) {
@@ -78,5 +82,9 @@ public final class WinnieThePooh extends Animal implements StatementProcessor, E
         }
         WinnieThePooh winnieThePooh = (WinnieThePooh) obj;
         return (Objects.equals(this.getName(), winnieThePooh.getName()));
+    }
+
+    public BodyPart getHead() {
+        return this.head;
     }
 }

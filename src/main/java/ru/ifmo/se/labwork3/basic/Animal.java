@@ -1,7 +1,9 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.basic;
 
-public abstract class Animal {
-    private String name = "";
+import ru.ifmo.se.labwork3.basic.Entity;
+
+public abstract class Animal implements Entity {
+    private final String name;
 
 
     public Animal(String name) {
@@ -9,10 +11,7 @@ public abstract class Animal {
 
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    @Override
     public String getName() {
         return name;
     }

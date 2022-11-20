@@ -1,12 +1,14 @@
 package ru.ifmo.se.labwork3;
 
+import ru.ifmo.se.labwork3.model.*;
+import ru.ifmo.se.labwork3.status.StatusOfSpeaker;
+
 public class Main {
     public static void main(String[] args) {
         //Creating objects
         var pot = new Pot("горшочек");
-        var winnieThePooh = new WinnieThePooh("Винни", "Пух");
+        var winnieThePooh = new WinnieThePooh("Винни", "Пух", new Muzzle("мордочка"));
         var piglet = new Piglet("Пятачок");
-        var muzzle = new Muzzle("мордочка");
         var honey = new Honey("мёд");
         var veryDeepHole = new VeryDeepHole("Очень Глубокая Яма");
         var trap = new Trap("западня");
@@ -16,7 +18,7 @@ public class Main {
         pot.fill(honey);
         veryDeepHole.fill(piglet);
         //Action
-        winnieThePooh.shove(pot, muzzle);
+        winnieThePooh.shove(pot, winnieThePooh.getHead());
         winnieThePooh.lick(pot);
         winnieThePooh.process(lickGood);
         winnieThePooh.carry(pot, trap);

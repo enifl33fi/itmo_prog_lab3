@@ -1,4 +1,6 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.model;
+
+import ru.ifmo.se.labwork3.basic.FillableLocation;
 
 import java.util.Objects;
 

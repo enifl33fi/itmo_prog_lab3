@@ -1,8 +1,10 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.model;
+
+import ru.ifmo.se.labwork3.basic.Information;
 
 import java.util.Objects;
 
-public class Statement {
+public class Statement implements Information {
     private String text;
     private boolean isCorrect;
 
@@ -10,12 +12,13 @@ public class Statement {
         this.text = text;
         this.isCorrect = isCorrect;
     }
-
+    @Override
     public boolean isCorrectCheck() {
         return this.isCorrect;
     }
 
-    public String getTextOfStatement() {
+    @Override
+    public String getText() {
         return this.text;
     }
 
@@ -25,16 +28,16 @@ public class Statement {
             return false;
         }
         Statement statement = (Statement) obj;
-        return (Objects.equals(this.getTextOfStatement(), statement.getTextOfStatement()) && this.isCorrect == statement.isCorrect);
+        return (Objects.equals(this.getText(), statement.getText()) && this.isCorrect == statement.isCorrect);
     }
 
 
     @Override
     public int hashCode() {
         if (this.isCorrect) {
-            return (("1" + this.getTextOfStatement()).hashCode());
+            return (("1" + this.getText()).hashCode());
         } else {
-            return (("0" + this.getTextOfStatement()).hashCode());
+            return (("0" + this.getText()).hashCode());
         }
     }
 

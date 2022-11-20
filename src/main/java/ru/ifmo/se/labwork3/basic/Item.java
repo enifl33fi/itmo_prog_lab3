@@ -1,14 +1,17 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.basic;
 
 
-public abstract class Item {
-    private String name;
+import ru.ifmo.se.labwork3.basic.Entity;
+
+public abstract class Item implements Entity {
+    private final String name;
 
 
     public Item(String name) {
         this.name = name;
     }
 
+    @Override
     public String getName() {
         return name;
     }

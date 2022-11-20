@@ -1,10 +1,12 @@
-package ru.ifmo.se.labwork3;
+package ru.ifmo.se.labwork3.model;
+
+import ru.ifmo.se.labwork3.basic.Item;
 
 import java.util.Objects;
 
-public class Muzzle extends Item {
+public class Honey extends Item {
 
-    public Muzzle(String name) {
+    public Honey(String name) {
         super(name);
     }
 
@@ -13,8 +15,8 @@ public class Muzzle extends Item {
         if (obj == null || obj.getClass() != this.getClass()) {
             return false;
         }
-        Muzzle muzzle = (Muzzle) obj;
-        return (Objects.equals(this.getName(), muzzle.getName()));
+        Honey honey = (Honey) obj;
+        return (Objects.equals(this.getName(), honey.getName()));
     }
 
 
