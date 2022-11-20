@@ -16,7 +16,9 @@ public abstract class Animal implements Entity {
         return name;
     }
 
-    public abstract void say(String phrase);
+    public void say(String phrase){
+        System.out.println(phrase);
+    }
 
     @Override
     public String toString() {
