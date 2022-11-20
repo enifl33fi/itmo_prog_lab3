@@ -1,5 +1,7 @@
 package ru.ifmo.se.labwork3.model;
 
+import ru.ifmo.se.labwork3.action.AbleToLookSomewhere;
+import ru.ifmo.se.labwork3.action.EmotionalSpeaker;
 import ru.ifmo.se.labwork3.basic.*;
 import ru.ifmo.se.labwork3.status.StatusOfSpeaker;
 

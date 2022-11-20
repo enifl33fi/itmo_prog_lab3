@@ -1,4 +1,4 @@
-package ru.ifmo.se.labwork3.basic;
+package ru.ifmo.se.labwork3.action;
 
 import ru.ifmo.se.labwork3.status.StatusOfSpeaker;
 
