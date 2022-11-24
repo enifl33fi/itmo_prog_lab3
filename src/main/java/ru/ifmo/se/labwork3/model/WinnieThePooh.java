@@ -66,6 +66,11 @@ public class WinnieThePooh extends Animal implements InformationProcessor, Emoti
         System.out.printf("%s %s: \"%s\"%n", this.getName(), status.toString(), phrase);
     }
 
+    @Override
+    public void say(String phrase) {
+        System.out.printf("%s %s: \"%s\"%n", this.getName(), StatusOfSpeaker.NORMAL.toString(), phrase);
+    }
+
 
     @Override
     public int hashCode() {
